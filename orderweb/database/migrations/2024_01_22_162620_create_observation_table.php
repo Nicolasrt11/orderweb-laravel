@@ -4,16 +4,15 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::create('type_activity', function (Blueprint $table) {
+        Schema::create('observation', function (Blueprint $table) {
             $table->id();
-            $table->string('descripcion',50) ->comment('descripcion tipo actividad'); 
+            $table->string('description', 50)->comment('descripción de la observación');
             $table->timestamps();
         });
     }
@@ -23,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('type_activity');
+        Schema::dropIfExists('observation');
     }
 };

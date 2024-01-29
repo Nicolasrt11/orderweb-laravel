@@ -5,7 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\technician>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Technician>
  */
 class TechnicianFactory extends Factory
 {
@@ -17,9 +17,10 @@ class TechnicianFactory extends Factory
     public function definition(): array
     {
         return [
-            'document' => fake() ->unique()->numberBetween(10000000000, 99),
-            'name'=> fake()->name(),
-            'phone'=> fake()->phoneNumber(),
+            'document' => fake()->unique()->numberBetween(10000000000, 99),
+            'name' => fake()->name(),
+            'phone' => fake()->phoneNumber(),
+
         ];
     }
 }

@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -17,9 +16,11 @@ return new class extends Migration
             $table->unsignedBigInteger('activity_id');
             $table->unique(['order_id', 'activity_id'], 'actividades por orden');
             $table->foreign('order_id')->references('id')->on('order')
-                    ->onDelete('cascade')->onUpdate('cascade');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->foreign('activity_id')->references('id')->on('activity')
-                    ->onDelete('cascade')->onUpdate('cascade');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
             $table->timestamps();
         });
     }
