@@ -2,8 +2,8 @@
 <html>
 <body>
     <div class="vertical_menu">
-        <a href="#"> Test 1</a>
-        <a href="#">Test 2 </a>
+        <a href="{{ route('test') }}"> Test 1</a>
+        <a href="{{ route('test2') }}">Test 2 </a>
     
 </body>
 </html>
