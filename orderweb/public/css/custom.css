@@ -1,5 +1,6 @@
 h1{
     color: brown;
+    font-weight: bold;
 }
 
 button{
@@ -15,26 +16,25 @@ q{
 .img_banner{
     display: block;
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;
 }
 
 .copyright{
     margin: 0 auto;
-    font-style:italic;
+    font-style: italic;
     font-size: small;
     color: gray;
 }
 
 .vertical_menu{
-    width: 200px;
-
+    width: 200px;    
 }
 
 .vertical_menu a{
     background-color: #eee;
     color: black;
     display: block;
-    padding: 12px;
+    padding: block;
     text-decoration: none;
 }
 
@@ -42,8 +42,8 @@ q{
     background-color: #ccc;
 }
 
-
 .vertical_menu a:active{
-    background-color: #04AA6D;
+    background-color: #04aa6d;
     color: white;
 }
+

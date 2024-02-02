@@ -1,9 +1,7 @@
-@extends('templates2.base')
-@section('title','test')
+@extends('templates2.base') <!-- se trae la template que necesito -->
+@section('tittle', 'Test') <!-- se hace para los yeits -->
 @section('content')
-
     <h1>Test</h1>
-    <q>En la vida existen dos tipos de personas las que saben contar y las que no </q>
-    <small>Homero simpson</small>
-    <br>
+    <q>En el mundo existen 3 tipos de personas, las que saben contar y las que no.</q>
+    <small>Homero J. Simpson</small>
 @endsection

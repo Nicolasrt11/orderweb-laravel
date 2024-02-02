@@ -16,8 +16,9 @@ class CausalSeeder extends Seeder
         Causal::insert([
             ['description' => 'Reparación contador'],
             ['description' => 'Suspensión del servicio'],
-            ['description' => 'Instalación de contador'],
-            ['description' => 'Cambio de contador'],
+            ['description' => 'Reconexión del servicio'],
+            ['description' => 'Instalación del contador'],
+            ['description' => 'Cambio del contador'],
         ]);
     }
 }

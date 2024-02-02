@@ -19,36 +19,37 @@ class DatabaseSeeder extends Seeder
         $this->call(CausalSeeder::class);
         $this->call(ObservationSeeder::class);
         $this->call(TypeActivitySeeder::class);
-        //se crea un usuario con rol administrador
-        User::factory(10)->create([
-            'Role_id' => 1,
+
+        //se crea un usuario con rol admnistrador 
+        User::factory()->create([
+            'role_id'=> 1
         ]);
-        //se crean varios usuarios con rol supervisor
+
+        //se cran varios usuarios con rol supervisor
         User::factory(3)->create([
-            'Role_id' => 2,
+            'role_id'=> 2
         ]);
 
         Technician::factory()->create([
-            'especiality' => 'Instalacion de redes',
+            'especiality' => 'Instalación de redes'
+        ]);
+
+        //se crean dos técnicos con especialidad = 2 Construcción - 2 Lectura de redes
+        Technician::factory(2)->create([
+            'especiality' => 'Construcción'
         ]);
 
         Technician::factory(2)->create([
-            'especiality' => 'Contruccion',
+            'especiality' => 'Lectura de redes'
         ]);
 
-        Technician::factory(2)->create([
-            'especiality' => 'Lectura de redes',
-        ]);
+        //se crea un técnico sin especialidad
+        Technician::factory(2)->create();
 
-        //tecnico sin especialidad
-        Technician::factory(2)->create([
-        ]);*/
+        $this->call(TestTechnicianSeeder::class);
 
-        /*$this->call(TestTechnicianSeeder::class);/*
-        /*$this->call(TestActivitySeeder::class);*/
-        /*$this->call(TestOrderSeeder::class);*/
-        $this->call(TestOrderActivityseeder::class);
+       //$this->call(TestActivitySeeder::class);
+        $this->call(TestOrderSeeder::class);
+        $this->call(TestOrderActivitySeeder::class);*/
     }
 }
-
-

@@ -15,17 +15,14 @@ class TestActivitySeeder extends Seeder
      */
     public function run(): void
     {
-        $typeActivity = TypeActivity::find(1);
-
-        //SELECT * FROM technician where document = 1117349878*/
-        $technician = Technician::where('document', '=', 1117349878)->first();
+        $typeActivity = TypeActivity::find(1); //FIND Solo funciona con campos donde haya ID
+        $technician = Technician::where('document', '=', 989898)->first(); //se usa first para que solo salga el primer resultado que encuentre
 
         $activity = new Activity();
-        $activity->description = 'Instalacion de redes';
-        $activity->hours = 3;
+        $activity->description = 'Test Activity';
+        $activity->hours = 10;
         $activity->technician_id = $technician->document;
         $activity->type_id = $typeActivity->id;
         $activity->save();
-
     }
 }
